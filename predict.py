@@ -37,7 +37,7 @@ def main():
     # create model
     model = vgg(model_name="vgg16", num_classes=10).to(device)
     # load model weights
-    weights_path = "./vgg16Net.pth"
+    weights_path = "./logs/vgg16Net.pth"
     assert os.path.exists(weights_path), "file: '{}' dose not exist.".format(weights_path)
     model.load_state_dict(torch.load(weights_path, map_location=device))
 
