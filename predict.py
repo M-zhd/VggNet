@@ -19,7 +19,7 @@ def main():
 
     # load image
     img_path = "./archive/test/LIONS/2.jpg"
-    assert os.path.exists(img_path), "file: '{}' dose not exist.".format(img_path)
+    assert os.path.exists(img_path), f"file: '{img_path}' dose not exist."
     img = Image.open(img_path)
     plt.imshow(img)
     # [N, C, H, W]

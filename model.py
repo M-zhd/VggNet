@@ -19,7 +19,7 @@ class VGG(nn.Module):  # 大的VGG网络 只有相同的后半部分
         self.classifier = nn.Sequential(
             nn.Linear(512*7*7, 4096),
             nn.ReLU(True),  # inplace=True 改变输入数据
-            nn.Dropout(p=0.5),  # 按概率p随机丢弃元素
+            nn.Dropout(p=0.5),  # 按概率p随机丢弃元素 一般0.5最好
             nn.Linear(4096, 4096),
             nn.ReLU(True),
             nn.Dropout(p=0.5),
