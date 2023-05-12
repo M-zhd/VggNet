@@ -26,7 +26,7 @@ def main():
                                    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])}
 
     # 返回当前目录 与特定文件夹路径加起来 返回绝对路径
-    data_root = os.path.abspath(os.path.join(os.getcwd(), "./archive"))  # get data root path
+    data_root = os.path.abspath(os.path.join(os.getcwd(), "../data/archive"))  # get data root path
     # image_path = os.path.join(data_root, "data_set", "flower_data")  # flower data set path
     # assert os.path.exists(image_path), "{} path does not exist.".format(image_path)
     train_dataset = datasets.ImageFolder(root=os.path.join(data_root, "train"),

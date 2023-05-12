@@ -18,7 +18,7 @@ def main():
          transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
     # load image
-    img_path = "./archive/test/LIONS/2.jpg"
+    img_path = "../data/archive/test/LIONS/2.jpg"
     assert os.path.exists(img_path), f"file: '{img_path}' dose not exist."
     img = Image.open(img_path)
     plt.imshow(img)
